@@ -1,0 +1,49 @@
+
+{
+  "simulation" : {
+    "name": "SC150-MD50-EJ200-E50-A75",
+    "width": 480,
+    "height": 270,
+    "ticks-per-day": 24,
+    "tick-delay-ms": 1,
+    "max-days": 100,
+    "epochs": 50,
+    "initial-population-size": 1500,
+    "reuse-population-size": 250 
+  },
+  "ecosystem" : {
+    "name": "SeededFlatFlora",
+    "configuration": {
+      "terrain.type": "FLAT_WORLD",
+      "daily.solar.property": 10,
+      "initial.soil.property": 1000,
+      "initial.plant.energy": 5,
+      "death.plant.age.limit.days": 75,
+      "death.plant.starvation.limit.energy": 0,
+      "death.plant.stagnation.limit.days": 10,
+      "death.plant.germination.limit.ticks": 10,
+      "cell.leaf.max-energy-production": 8,
+      "cell.leaf.metabolic-rate": 1,
+      "cell.seed.max-energy-production": 0,
+      "cell.seed.metabolic-rate": 0,
+      "cell.stem.max-energy-production": 0,
+      "cell.stem.metabolic-rate": 1,
+      "cell.root.max-energy-production": 2,
+      "cell.root.metabolic-rate": 2,
+      "action.leaf.grow": 3,
+      "action.root.grow": 2,
+      "action.seed.grow": 100000,
+      "action.seed.eject": 200,
+      "genome.transpose.probability": 5,
+      "genome.mutate.probability": 3,
+      "metadata.ttl": 600,
+      "metadata.export": true,
+      "metadata.export.path": "./output/",
+      "metadata.Performance.enabled": true,
+      "metadata.Environment.enabled": true,
+      "metadata.Performance.export": true,
+      "metadata.Environment.export": true,
+      "metadata.Environment.sampling-rate": 10
+    }
+  }
+}
