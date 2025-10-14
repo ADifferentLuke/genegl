@@ -17,6 +17,29 @@
     <properties>
         <lwjgl.version>3.3.3</lwjgl.version>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub ADifferentLuke Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/ADifferentLuke/genegl</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub ADifferentLuke Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/ADifferentLuke/genegl</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <developers>
+        <developer>
+            <id>lukemcomber</id>
+            <name>Luke McOmber</name>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+
+
     <dependencies>
         <dependency>
             <groupId>net.lukemcomber</groupId>
