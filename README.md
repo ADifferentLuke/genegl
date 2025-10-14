@@ -45,3 +45,14 @@ Due to how macOS handles OpenGL and the main application thread, **you must incl
 ```bash
 java -XstartOnFirstThread -jar genegl-0.0.1-SNAPSHOT.jar sim-parameters.json
 ```
+
+### Color Key
+
+| Cell Type | Description | Color Preview | RGB (Hex) |
+|------------|--------------|----------------|------------|
+| Leaf | Energy-producing cell | 🟩 | `#14ff14` |
+| Stem | Structural support | 🟢 | `#32a852` |
+| Seed (Inactive) | Unactivated ejected seed | 🟥 | `#f00505` |
+| Seed (Active) | Activated or rooted seed | 🟨 | `#f0d005` |
+| Root | Nutrient absorption cell | 🟫 | `#7d6029` |
+| Default | Unspecified / debug cell | ⚪ | `#e6e6e6` |
