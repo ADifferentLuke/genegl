@@ -159,7 +159,7 @@ public class ViewPort {
                     fps = frames / Math.max(1e-6, (t - lastTitleUpdate));
                     frames = 0;
                     lastTitleUpdate = t;
-                    String title = String.format("LaGiggle — cells %,d | FPS %.1f", pointCount, fps);
+                    String title = String.format("GeneGL — cells %,d | FPS %.1f", pointCount, fps);
                     glfwSetWindowTitle(window, title);
                 }
 
@@ -173,7 +173,7 @@ public class ViewPort {
                         try {
                             allCells.addAll(CellHelper.getAllOrganismsCells(iter.next().getFirstCell()));
                         } catch( final RuntimeException e ){
-                            System.err.println("Resetting");
+                            //System.err.println("Resetting");
                         }
                     }
 
@@ -418,7 +418,7 @@ public class ViewPort {
         glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
 
         // Create the window
-        window = glfwCreateWindow(width, height, "LaGiggle", NULL, NULL);
+        window = glfwCreateWindow(width, height, "GeneGL", NULL, NULL);
         if (window == NULL) throw new RuntimeException("Failed to create the GLFW window");
 
         // Make the OpenGL context current

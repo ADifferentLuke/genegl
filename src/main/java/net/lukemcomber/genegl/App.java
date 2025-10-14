@@ -75,7 +75,19 @@ public class App {
 
         try {
             System.out.println("Loading configuration ....");
-            final GeneGLConfig config = objectMapper.readValue(new File(args[0]), GeneGLConfig.class);
+            GeneGLConfig config;
+            File configFile = new File(args[0]);
+            if (configFile.exists()) {
+                config = objectMapper.readValue(configFile, GeneGLConfig.class);
+            } else {
+                // Try classpath fallback
+                try (InputStream resourceStream = App.class.getResourceAsStream("/" + args[0])) {
+                    if (resourceStream == null) {
+                        throw new IOException("Configuration file not found on filesystem or classpath: " + args[0]);
+                    }
+                    config = objectMapper.readValue(resourceStream, GeneGLConfig.class);
+                }
+            }
             System.out.println("Loading App ....");
             final App app = new App(config);
             System.out.println("Running ....");
